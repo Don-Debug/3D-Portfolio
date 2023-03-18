@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import Loading from "./components/Loading";
+import Loading from "./components/Loading";
 
 import About from "./components/About";
 import Experience from "./components/Experience";
@@ -13,35 +13,35 @@ import Tech from "./components/Tech";
 import Stars from "./components/canvas/Stars";
 
 const App = () => {
-  //   const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setIsLoading(false);
-  //     }, 2000);
-  //   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
-      {/* {isLoading ? (
+      {isLoading ? (
         <Loading />
-      ) : ( */}
-      <BrowserRouter>
-        <div className=" relative z-0 bg-primary">
-          <Stars />
-          <div>
-            <Navbar />
-            <Home />
-          </div>
+      ) : (
+        <BrowserRouter>
+          <div className=" relative z-0 bg-primary">
+            <Stars />
+            <div>
+              <Navbar />
+              <Home />
+            </div>
 
-          <About />
-          <Projects />
-          <Tech />
-          <Experience />
-          <Feedbacks />
-          <Contact />
-        </div>
-      </BrowserRouter>
-      {/* )} */}
+            <About />
+            <Projects />
+            <Tech />
+            <Experience />
+            <Feedbacks />
+            <Contact />
+          </div>
+        </BrowserRouter>
+      )}
     </>
   );
 };
