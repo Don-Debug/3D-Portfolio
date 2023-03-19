@@ -22,6 +22,7 @@ const ComputerCanvas = ({ isMobile }) => {
         object={computer.scene}
         scale={isMobile ? 3.37 : 5.65}
         position={isMobile ? [-1, -2.25, -1.5] : [-2, -3.25, -3]}
+        rotation={[-0.1, 0, 0]}
       />
     </mesh>
   );
