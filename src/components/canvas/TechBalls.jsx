@@ -8,6 +8,9 @@ import {
   useTexture,
 } from "@react-three/drei";
 
+import { motion } from "framer-motion";
+import { zoomIn } from "../../utils/motion";
+
 import CanvasLoader from "../Loader";
 
 const LogoBall = (props) => {
@@ -17,7 +20,7 @@ const LogoBall = (props) => {
     <Float speed={0.75} rotationIntensity={1} floatIntensity={1}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={2.4}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff"
@@ -39,19 +42,21 @@ const LogoBall = (props) => {
 
 const TechBalls = ({ icon }) => {
   return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          autoRotate={true}
-        />
-        <LogoBall imgUrl={icon} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <motion.div variants={zoomIn()}>
+      <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            autoRotate={true}
+          />
+          <LogoBall imgUrl={icon} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </motion.div>
   );
 };
 
