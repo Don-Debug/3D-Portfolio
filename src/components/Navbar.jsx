@@ -7,9 +7,6 @@ import { styles } from "../styles";
 import { Logo } from "../assets/index";
 import { LogoBall } from "./canvas";
 
-import { motion } from "framer-motion";
-import { zoomIn } from "../utils/motion";
-
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState("");
@@ -26,9 +23,9 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <motion.div variants={zoomIn()} className=" w-12 h-12">
+          <div className=" w-12 h-12">
             <LogoBall icon={Logo} />
-          </motion.div>
+          </div>
           <p className=" text-white text-[18px] font-bold cursor-pointer flex ">
             Elision
             <span className=" hidden sm:flex">'s &nbsp;| &nbsp;Portfolio</span>
