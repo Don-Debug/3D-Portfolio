@@ -41,7 +41,7 @@ const TechBalls = ({ icon }) => {
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
         <LogoBall imgUrl={icon} />
       </Suspense>
       <Preload all />
