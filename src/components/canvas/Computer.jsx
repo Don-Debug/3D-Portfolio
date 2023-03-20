@@ -56,7 +56,6 @@ const Computer = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          autoRotate={isMobile ? true : false}
           enableDamping={true}
           enableZoom={false}
           enablePan={false}

@@ -25,6 +25,7 @@ const Hero = () => {
       </div>
 
       <Computer />
+      <div className=" w-full h-[30%] absolute bottom-0 left-0 bg-transparent z-20"></div>
     </section>
   );
 };
