@@ -3,6 +3,9 @@ import { TechBalls } from "./canvas/index";
 import { technologies } from "../constants/index";
 import { SectionFixer } from "../fixed/index";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
+
 const Tech = () => {
   const [currentTech, setCurrentTech] = useState(0);
 
@@ -17,9 +20,13 @@ const Tech = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {technologies.slice(0, currentTech + 1).map((technology) => (
-        <div className="w-28 h-28" key={technology.icon}>
+        <motion.div
+          variants={fadeIn()}
+          className="w-28 h-28"
+          key={technology.icon}
+        >
           <TechBalls icon={technology.icon} />
-        </div>
+        </motion.div>
       ))}
     </div>
   );
