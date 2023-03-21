@@ -9,7 +9,7 @@ import Feedbacks from "./components/Feedbacks";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import Tech from "./components/Tech";
+// import Tech from "./components/Tech";
 import Stars from "./components/canvas/Stars";
 
 const App = () => {
@@ -20,6 +20,7 @@ const App = () => {
       setIsLoading(false);
     }, 2000);
   }, []);
+
   return (
     <>
       {isLoading ? (

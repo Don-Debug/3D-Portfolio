@@ -98,8 +98,8 @@ const experiences = [
   {
     title: "React.js Developer",
     company_name: "Starbucks",
+    months: "18 months",
     icon: starbucks,
-    iconBg: "#383E56",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -111,7 +111,7 @@ const experiences = [
     title: "React Native Developer",
     company_name: "Tesla",
     icon: tesla,
-    iconBg: "#E6DEDD",
+    months: "13 months",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -122,8 +122,8 @@ const experiences = [
   {
     title: "Web Developer",
     company_name: "Shopify",
+    months: "7 months",
     icon: shopify,
-    iconBg: "#383E56",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -134,8 +134,9 @@ const experiences = [
   {
     title: "Full stack Developer",
     company_name: "Meta",
+    months: "Working...",
+    color: "black",
     icon: meta,
-    iconBg: "#E6DEDD",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
