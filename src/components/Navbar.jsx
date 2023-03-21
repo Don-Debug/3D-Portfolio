@@ -6,7 +6,6 @@ import { navLinks } from "../constants/index";
 import { styles } from "../styles";
 import { Logo } from "../assets/index";
 import { LogoBall } from "./canvas";
-import LazyLoad from "react-lazyload";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -25,9 +24,7 @@ const Navbar = () => {
           }}
         >
           <div className=" w-12 h-12">
-            <LazyLoad offset={100}>
-              <LogoBall icon={Logo} />
-            </LazyLoad>
+            <LogoBall icon={Logo} />
           </div>
           <p className=" text-white text-[18px] font-bold cursor-pointer flex ">
             Elision
