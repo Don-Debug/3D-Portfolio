@@ -56,8 +56,8 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={zoomIn()}>
-        <p className={styles.sectionSubText}>Learn more about</p>
-        <h2 className={styles.sectionHeadText}>Elision</h2>
+        <p className={styles.sectionSubText}>Where I have worked</p>
+        <h2 className={styles.sectionHeadText}>My Experience</h2>
       </motion.div>
 
       <motion.p
