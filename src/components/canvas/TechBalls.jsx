@@ -7,6 +7,7 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
+import { useMemo } from "react";
 
 import CanvasLoader from "../Loader";
 
@@ -38,6 +39,8 @@ const LogoBall = (props) => {
 };
 
 const TechBalls = ({ icon }) => {
+  const memoizedIcon = useMemo(() => icon, [icon]);
+
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
@@ -48,7 +51,7 @@ const TechBalls = ({ icon }) => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <LogoBall imgUrl={icon} />
+        <LogoBall imgUrl={memoizedIcon} />
       </Suspense>
       <Preload all />
     </Canvas>
