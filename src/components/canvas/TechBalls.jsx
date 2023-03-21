@@ -14,7 +14,7 @@ const LogoBall = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={1}>
+    <Float speed={0.75} rotationIntensity={2} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.4}>
@@ -44,7 +44,6 @@ const TechBalls = ({ icon }) => {
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          autoRotate={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
