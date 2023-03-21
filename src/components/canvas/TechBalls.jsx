@@ -17,7 +17,7 @@ const LogoBall = (props) => {
     <Float speed={1.75} rotationIntensity={1} floatIntensity={1}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.7}>
+      <mesh castShadow receiveShadow scale={2.4}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff"
