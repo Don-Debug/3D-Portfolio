@@ -158,6 +158,14 @@ const testimonials = [
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    name: "Chris B!tch",
+    designation: "COW",
+    company: "Fredi",
+    image: "https://randomuser.me/api/portraits/men/6.jpg",
+  },
+  {
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like Rick does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
