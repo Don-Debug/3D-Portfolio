@@ -102,6 +102,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
             <input
+              autoComplete="none"
               type="email"
               name="email"
               value={form.email}
