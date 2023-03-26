@@ -57,7 +57,7 @@ const Feedbacks = () => {
         </motion.div>
       </div>
       <div
-        className={`-mt-20 pb-14 ${styles.paddingX} flex overflow-x-auto snap-x snap-mandatory gap-5`}
+        className={`-mt-20 pb-14 ${styles.paddingX} flex overflow-x-auto snap-x snap-mandatory horizontal-sb gap-5`}
       >
         {testimonials.map((testimonial, index) => (
           <div key={testimonial.name} className="flex-shrink-0 snap-center">
